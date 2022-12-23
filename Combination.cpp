@@ -15,9 +15,14 @@ void precal(){
 
 }
 int calCombinations(int n , int r, int **arr){
-    if (n==r || r==0 || n==0)
+    if (n==r || r==0)
         return 1;
 
+    if(r==1)
+        return n;
+    if(n==0)
+        return 0;
+        
     if (arr[n][r]!=-1)
         return arr[n][r];
 
