@@ -14,11 +14,29 @@ using namespace std;
 void precal(){
 
 }
+int calCombinations(int n , int r, int **arr){
+    if (n==r || r==0 || n==0)
+        return 1;
 
+    if (arr[n][r]!=-1)
+        return arr[n][r];
+
+    arr[n][r]=calCombinations(n-1,r,arr)+ calCombinations(n-1,r-1,arr);
+    return arr[n][r];
+}
 void solve (){
     int  n , r;
     cin>> n>>r;
-    
+    int **arr = new int*[n+1];
+    for (int i =0;i<=n;i++){
+        arr[i]= new int[r+1];
+
+    }
+    for (int i =0;i<=n;i++)
+        for (int j = 0;j<=r;j++){
+            arr[i][j]=-1;
+        }
+    cout <<calCombinations(n,r, arr)<<'\n';
 }
 
 int main(){

@@ -19,9 +19,8 @@ void solve (){
     int n ;
     cin>> n;
     string output = "";
-    // if(n==0)
-    //     cout<<"0"<<"\n";
-
+    if(n==0)
+        cout<<"0"<<"\n";
     while(n>=0){
         char c = (n%2)+'0';
         output= c+output;
