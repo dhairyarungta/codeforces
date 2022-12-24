@@ -42,11 +42,42 @@ void combination_second(int n , int r){
     }
     cout<< arr[r]<<endl;
 }
+
+
+void combination_third(int n ,int r){
+    long long ans = 1 ;
+    for (int i =0;i<r;i++){
+        ans=(ans*(n-i))/(i+1);
+        // why does this above statement alwasy give an integer 
+
+        // mulitplying terms in order of (n/1)*(n-1/2)*(n-3/3) and so on ,
+        // for ans*(n-i)/(i+1), by this point we already have had i+1 consecutive numbers multiplied
+        // which ensures that atleast one mutliple of i+1 exists in the whole sequence, example mutiple of 5 repeats every 5 digits 
+        //hence this ensures that the answer we get each time remains a integer and hence correct
+    }
+    cout<< ans;
+}
+
+void combination_fourth(int n , int r){
+    if(r>n){
+        cout<< 0;
+        return;
+    }
+    long long ans = 1;
+    for (int i = 1;i<=r;i++) {
+        ans =ans*(n-i+1)/i;
+    }
+    cout<<ans;
+}
+
+
+
 int main(){
     int n , r;
     cin>> n>> r;
-    combination_second(n,r);
+    // combination_second(n,r);
     // combination_first(n,r);
-
+    // combination_third(n,r);
+    combination_fourth(n,r);
     return 0;
 }
