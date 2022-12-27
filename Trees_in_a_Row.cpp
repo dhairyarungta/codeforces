@@ -18,13 +18,38 @@ void precal(){
 void solve (){
     int n , k;
     cin>>n>>k;
-    vector<int>a(n+1);
-    for(int i =1;i<=n;i++)cin>>a[i];
+    vector<int>a(n);
+    fr(i,0,n) cin>>a[i];
 
-    for (int i =1;i<=n;i++){
-        
+    int minChanges =INT_MAX;
+    int curCount = 0;
+    int a1;
+
+    for (int i =1;i<=1000;i++){
+        curCount=0;
+        for (int j =0;j<n;j++){
+        int tempHeight = i+((j)*k);
+        if(tempHeight!=a[j]){
+            curCount++;
+        }
+        }
+        if(curCount<minChanges){
+            a1 =i;
+            minChanges=curCount;
+        }
     }
+    cout<<minChanges<<"\n";
+    int temp=a1;
+    for (int i =0;i<n;i++){
+        if(temp>a[i]){
+            cout<<"+"<<" "<<i+1<<" "<<abs(temp-a[i])<<"\n";
+        }
+        else if(temp<a[i]){
+            cout<<"-"<<" "<<i+1<<" "<<abs(temp-a[i])<<"\n";
+        }
 
+        temp+=k;
+    }
 }
 
 int main(){
