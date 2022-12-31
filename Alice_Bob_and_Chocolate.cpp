@@ -66,8 +66,6 @@ struct eater
         }
 };
 
-
-
 void solve(){
     int n ;
     cin>>n;
