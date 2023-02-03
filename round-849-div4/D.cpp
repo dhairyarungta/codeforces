@@ -16,7 +16,26 @@ void precal(){
 }
 
 void solve (){
-    
+    int n; cin>>n;
+    string s; cin>>s;
+    int ansMax = 0;
+    int cur= 0;
+    int maxIndex = 0;
+    set<char>split;
+    for (int i =0;i<n;i++){
+        if(split.count(s[i]==0)){
+            split.insert(s[i]);
+            cur++;            
+        }
+        else{
+            
+        }
+
+        if(cur>ansMax){
+            ansMax=cur;
+            }
+
+    }
 
 }
 
@@ -26,7 +45,7 @@ int main(){
     cout<< setprecision(10);
     precal();
     int t =1;
-    // cin>> t ;
+    cin>> t ;
     for (int i =1;i<=t;i++){
         // cout<< "Case #"<<i<<": ";
         solve();

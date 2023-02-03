@@ -16,8 +16,23 @@ void precal(){
 }
 
 void solve (){
-    
+    int n ;
+    cin>>n;
+    string s;
+    cin>>s;
+    int i =0,j=n-1;
+    while(i<j){
+        int cur = (s[i])^(s[j]);
+        if(cur==0){
+            break;
+        }
+        else {
+            i++;j--;
+        }
+           
+    }
 
+    cout<<j-i+1<<"\n";
 }
 
 int main(){
@@ -26,7 +41,7 @@ int main(){
     cout<< setprecision(10);
     precal();
     int t =1;
-    // cin>> t ;
+    cin>> t ;
     for (int i =1;i<=t;i++){
         // cout<< "Case #"<<i<<": ";
         solve();

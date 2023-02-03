@@ -10,13 +10,24 @@
 #define all(x) (x).begin(), (x).end()
 
 using namespace std;
+set<char>s;
 
 void precal(){
-
+    string input  ="codeforces";
+    for (auto i:input){
+        s.insert(i);
+    }
 }
-
+//contest div 4
 void solve (){
-    
+    char c ;
+    cin>>c;
+    if(s.count(c)){
+        cout<<"YES"<<"\n";
+    }
+    else{
+        cout<<"NO"<<"\n";
+    }
 
 }
 
@@ -26,7 +37,7 @@ int main(){
     cout<< setprecision(10);
     precal();
     int t =1;
-    // cin>> t ;
+    cin>> t ; 
     for (int i =1;i<=t;i++){
         // cout<< "Case #"<<i<<": ";
         solve();
