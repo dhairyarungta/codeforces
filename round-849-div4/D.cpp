@@ -17,26 +17,59 @@ void precal(){
 
 void solve (){
     int n; cin>>n;
+    if (n==1){
+        cout<<0<<endl;
+        return;
+    }
     string s; cin>>s;
     int ansMax = 0;
     int cur= 0;
     int maxIndex = 0;
     set<char>split;
-    for (int i =0;i<n;i++){
-        if(split.count(s[i]==0)){
+    int i;
+    for ( i =0;i<n;i++){
+    // cout<< i<<" ";  
+
+        if(split.count(s[i])==0){
             split.insert(s[i]);
-            cur++;            
+            // cout<<cur<<endl;
+            cur++;      
+
+            // if(cur>ansMax){
+            // ansMax=cur;
+            // maxIndex=i;
+            // }
+      
         }
         else{
-            
+            cur--;
+            // if(check ==true)
+            maxIndex=i-1;
+            break;
         }
 
-        if(cur>ansMax){
-            ansMax=cur;
-            }
 
     }
+    cout<< maxIndex<<endl;
+    split.clear();
+    int num = 0;
+    for (int j =0;j<=maxIndex;j++){
+        split.insert(s[j]);
+    }
+    for (auto k :split) cout<<k<<" ";
+    cout<<endl;
 
+    num+=split.size();
+    split.clear();
+    for (int j =maxIndex+1;j<n;j++){
+        split.insert(s[j]);
+    }
+    for (auto k :split) cout<<k<<" ";
+    cout<<endl;
+
+    num+=split.size();
+
+    cout<<num<<"\n";
 }
 
 int main(){
