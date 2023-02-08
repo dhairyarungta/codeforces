@@ -16,7 +16,21 @@ void precal(){
 }
 
 void solve (){
+    int n ;
+    cin>>n;
+    vector<int>vec(n+1);
+    vec[0]=0;
 
+    for (int i =1;i<=n;i++)cin>>vec[i];
+    vector<int>ans(n+1,0);
+
+    for (int i=1;i<=n;i++){
+        ans[vec[i]]=i;
+    }
+    for (int i=1;i<=n;i++){
+        cout<<ans[i]<<" ";
+    }
+    cout<<"\n";
 }
 
 int main(){
