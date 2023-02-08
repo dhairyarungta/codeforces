@@ -16,6 +16,20 @@ void precal(){
 }
 
 void solve (){
+    int n;
+    cin>> n;
+    vector<int>vec(n+1);
+    for (int i =1;i<=n;i++){
+        int temp ;
+        cin>> temp;
+        vec[temp]=i;
+    }
+    for(int i=1;i<=n;i++)cout<<vec[i]<<" ";
+
+    cout<<"\n";
+}
+
+void solve1 (){
     int n ;
     cin>>n;
     vector<int>vec(n+1);
@@ -32,6 +46,7 @@ void solve (){
     }
     cout<<"\n";
 }
+
 
 int main(){
     fast_io;
