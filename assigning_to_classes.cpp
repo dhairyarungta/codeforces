@@ -16,29 +16,6 @@ void precal(){
 }
 
 void solve (){
-    int n ,m;
-    cin>>n>>m;
-    vector<vector<char>>vec(n);
-    for (int i =0;i<n;i++){
-        for (int j = 0;j<m;j++){
-            char temp;
-            cin>>temp;
-            vec[i].push_back(temp);
-        }
-    }
-    int numchanges = 0;
-    for(int i =0;i<m-1;i++){
-        if(vec[n-1][i]!='R'){
-            numchanges++;
-        }
-        
-    }
-    for (int i =0;i<n-1;i++){
-        if(vec[i][m-1]!='D')
-        numchanges++;
-    }
-    cout<<numchanges<<"\n";
-
 
 }
 
@@ -48,7 +25,7 @@ int main(){
     cout<< setprecision(10);
     precal();
     int t =1;
-    cin>> t ;
+    // cin>> t ;
     for (int i =1;i<=t;i++){
         // cout<< "Case #"<<i<<": ";
         solve();
