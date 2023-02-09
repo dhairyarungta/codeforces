@@ -17,14 +17,25 @@ void precal(){
 void solve (){
     int n;
     cin>>n;
-    vector<int> vec(n);
+    vector<ll> vec(n);
     for(auto &i:vec)cin>>i;
 
-    vector<int> ans(n);
+    vector<int> ans(n,0);
     //stores length of longest increasing subarray at index i
 
-    
+    for (int i =0;i<n;i++){
+        if(vec[i]>vec[i-1]){
+            ans[i]=ans[i-1]+1;
+        }
+        else {
+            ans[i]=1;
+        }
+    }
 
+    int maxCount=0;
+    for (auto i :ans)maxCount=max(maxCount,i);
+
+    cout<<maxCount<<"\n";
 
 }
 void solve1 (){
