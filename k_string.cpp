@@ -16,15 +16,6 @@ void precal(){
 }
 
 void solve (){
-    int n;
-    cin>> n;
-    vector<int> vec(2*n);
-    for (auto &i:vec)cin>>i;
-    sort(vec.begin(), vec.end());
-    // for (auto &i:vec)cout<<i<<" ";/
-
-    int num1 = vec[n-1], num2  = vec[n];
-    cout<<num2-num1<<"\n";
 
 }
 
@@ -34,7 +25,7 @@ int main(){
     cout<< setprecision(10);
     precal();
     int t =1;
-    cin>> t ;
+    // cin>> t ;
     for (int i =1;i<=t;i++){
         // cout<< "Case #"<<i<<": ";
         solve();
