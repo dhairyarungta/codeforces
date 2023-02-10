@@ -16,8 +16,34 @@ void precal(){
 }
 
 void solve (){
+    int n, m;
+    cin>>n>>m;
+    
+    int k = m/n;
+    if(m%n !=0){
+        cout<<-1<<"\n";
+        return;
+    }
+        int moves= 0;
+    while(k!=1){
+        if(k%2==0){
+            k/=2;
+            moves++;
+            }
+        else if(k%3==0){
+            k/=3;
+            moves++;
+        }
+        else {
+            cout<<-1<<"\n";
+            return;
+        }
+    }
+    cout<<moves<<"\n";
+
 
 }
+
 
 int main(){
     fast_io;
