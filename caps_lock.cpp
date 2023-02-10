@@ -15,26 +15,23 @@ void precal(){
 
 }
 
-void solve (){
-    string s ;
-    cin>>s;
-
-    string copy = s;
-    if(s.size()==1){
-        cout<<toupper(s[0])<<'\n';
-        return;
-    }
-    
+void solve(){
+    string s;
+    cin>> s;
+    bool check = true;
     for (int i =1;i<s.size();i++){
-        if(toupper(s[i])!=s[i]){
-            cout<<copy<<"\n";
-            return;
-        }
-        else {
-            s[i]=tolower(s[i]);
-        }
+        if(toupper(s[i])!=s[i])check=false;
     }
-    s[0]=toupper(s[0]);
+    if(check!=false){
+        if(s[0]==toupper(s[0])){
+            for(auto &i:s)i=tolower(i);
+        }
+        else{
+            s[0]=toupper(s[0]);
+            for (int i =1;i<s.size();i++)s[i]=tolower(s[i]);
+        }
+
+    }
     cout<<s<<"\n";
 }
 
