@@ -16,11 +16,26 @@ void precal(){
 }
 
 void solve (){
-    int n;
-    cin>>n;
-    for(int i=0;i<=2*n;i++){
-        for (int j = 0;j<)
+    string s ;
+    cin>>s;
+
+    string copy = s;
+    if(s.size()==1){
+        cout<<toupper(s[0])<<'\n';
+        return;
     }
+    
+    for (int i =1;i<s.size();i++){
+        if(toupper(s[i])!=s[i]){
+            cout<<copy<<"\n";
+            return;
+        }
+        else {
+            s[i]=tolower(s[i]);
+        }
+    }
+    s[0]=toupper(s[0]);
+    cout<<s<<"\n";
 }
 
 int main(){
