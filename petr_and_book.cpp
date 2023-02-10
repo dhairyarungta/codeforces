@@ -16,7 +16,23 @@ void precal(){
 }
 
 void solve (){
+    int n ;
+    cin>> n;
+    vector<int> vec(7);
+    for (int i =0;i<7;i++)cin>>vec[i];
+    int cur = 0;
 
+    while(true){
+        n-=vec[cur];
+        if(n<=0){
+            cout<<cur+1<<"\n";
+            break;
+        }
+
+        cur++;
+        cur%=7;
+
+    }
 }
 
 int main(){
