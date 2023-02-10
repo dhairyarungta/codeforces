@@ -16,7 +16,29 @@ void precal(){
 }
 
 void solve (){
+    ll n;
+    cin>>n;
+    vector<ll>vec(n);
+    int k = 1;
+    for (auto &i :vec)i = k++;
+    if(n==2){
+        cout<<2<<"\n";
+        cout<<1<<" "<<2<<"\n";
+        return ;
+    }
+    cout<<2<<"\n";
+    cout<<vec[n-3]<<" "<<vec[n-1]<<"\n";
+    vec[n-3]= (vec[n-3]+vec[n-1])/2;
+
     
+    vec.pop_back();
+    for (int i =vec.size()-2;i>=0;i--){
+        cout<<vec[i]<<" "<<vec[i+1]<<"\n";
+        vec[i]=(vec[i]+vec[i+1])/2;
+        vec.pop_back();
+    }
+    
+
 }
 
 int main(){

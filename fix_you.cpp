@@ -19,6 +19,8 @@ void solve (){
     int n ,m;
     cin>>n>>m;
     vector<vector<char>>vec(n);
+    // easier to take input as vector<string> vec(n);
+
     for (int i =0;i<n;i++){
         for (int j = 0;j<m;j++){
             char temp;
