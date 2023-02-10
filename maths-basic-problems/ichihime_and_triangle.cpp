@@ -16,7 +16,26 @@ void precal(){
 }
 
 void solve (){
+    int a, b,c,d;
+    cin>>a>>b>>c>>d;
 
+    // int x= a,y=b,z=c;
+
+    // for (;x<=b;x++ ){
+    //     if(x+y>z){
+    //         cout<<x<<" "<<y<<" "<<z<<"\n";
+    //         return;
+    //     }
+    // }
+    // x=b;
+    // for (;y<=c;y++){
+    //     if(x+y>z){
+    //      cout<<x<<" "<<y<<" "<<z<<"\n";
+    //         return;
+
+    //     }
+    // }
+    cout<<b<<" "<<c<<" "<<c<<"\n";
 }
 
 int main(){
