@@ -16,32 +16,6 @@ void precal(){
 }
 
 void solve (){
-    int k;
-    cin>> k;
-    string s ;
-    cin>>s;
-
-    map<char, int> mp;
-    for (auto i:s)mp[i]++;
-    for(auto [i,j]:mp){
-        if(mp[i]%k!=0){
-            cout<<-1<<"\n";
-            return;
-        }
-        else{
-            mp[i]/=k;
-        }
-    }
-
-    string ans ="";
-    for(auto &[i,j]:mp){
-        while(j>0){
-            ans.push_back(i);
-            j--;
-        }
-    }    
-    while(k--)cout<<ans;
-    cout<<"\n";   
 
 }
 

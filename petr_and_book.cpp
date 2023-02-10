@@ -28,7 +28,6 @@ void solve (){
             cout<<cur+1<<"\n";
             break;
         }
-
         cur++;
         cur%=7;
 
