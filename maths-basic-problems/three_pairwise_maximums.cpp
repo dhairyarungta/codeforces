@@ -16,7 +16,11 @@ void precal(){
 }
 
 void solve (){
+    int x , y , z;
+    cin>>x>>y>>z;
+    int a, b,c, ;
 
+    while()
 }
 
 int main(){
