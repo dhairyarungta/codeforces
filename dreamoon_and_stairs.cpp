@@ -18,7 +18,17 @@ void precal(){
 void solve (){
     int n ,m;
     cin>>n>>m;
-    
+    if(n<m){
+        cout<<-1<<"\n";
+        return;
+    }
+    int num = n/2;
+    int extra = num%m;
+    num = num+extra;    
+    // if(n%2==1)
+    //     num++;
+
+    cout<<num<<"\n";
 }
 
 int main(){

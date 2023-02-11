@@ -19,9 +19,11 @@ void solve (){
     int n;
     cin>>n;
 
+    int temp = n;
+
     int four =0;
     int seven= 0;
-    
+    while(temp)
 }
 
 int main(){
