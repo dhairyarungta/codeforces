@@ -19,7 +19,48 @@ void solve (){
     int n;
     cin>>n;
     for(int i=0;i<=2*n;i++){
-        for (int j = 0;j<)
+        if(i<=n){
+            for(int j = 0;j<n-i;j++)
+                cout<<"  ";
+
+            for (int j=0;j<=i;j++){
+                if(i!=0)
+                cout<<j<<" ";
+                else 
+                cout<<j;
+            }
+            for (int j =i-1;j>=0;j--){
+                if(j!=0)
+                cout<<j<<" ";
+                else 
+                cout<<j;
+            }
+
+            cout<<"\n";
+        }
+        else {
+            for (int j = 0;j<i-n;j++){
+                cout<<"  ";
+            }
+
+            for (int j =0;j<=2*n-i;j++){
+                if(2*n-i !=0)
+                cout<<j<<" ";
+                else 
+                cout<<j;
+
+            }
+            for(int j =2*n-i-1;j>=0;j--){
+                if(j!=0)
+                cout<<j<<" ";
+                else 
+                cout<<j;
+            }
+            cout<<"\n";
+
+        }
+        
+
     }
 }
 
