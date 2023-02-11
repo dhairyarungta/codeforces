@@ -14,7 +14,24 @@ using namespace std;
 void precal(){
 
 }
-
+void elegantsolve(){
+    int n;
+    cin>>n;
+    for (int i =0;i<2*n+1;i++){
+        for (int j=0;j<abs(n-i);j++){
+            cout<<"  ";
+        }
+        int maxrowentry = min(i,abs(2*n-i));
+        for (int j =0;j<2*maxrowentry+1;j++){
+            cout<<maxrowentry-abs(maxrowentry-j);
+           
+            if(j==2*maxrowentry)
+                cout<<"\n";
+            else 
+                cout<<" ";
+        }
+    }
+}
 void solve (){
     int n;
     cin>>n;
@@ -73,7 +90,8 @@ int main(){
     // cin>> t ;
     for (int i =1;i<=t;i++){
         // cout<< "Case #"<<i<<": ";
-        solve();
+        // solve();
+        elegantsolve();
     }
 
     return 0;
