@@ -19,7 +19,20 @@ void solve (){
     int l, r;
     cin>>l>>r;
     int x , y;
-    
+    if(r%2==0){
+        x=r/2;
+        y = r;
+    }
+    else{
+        x=(r-1)/2;
+        y =r-1;
+
+    }
+    if(x<l){
+        cout<<-1<<" "<<-1<<'\n';
+
+    }
+    else cout<<x<<" "<<y<<"\n";
 }
 
 int main(){
