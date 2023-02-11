@@ -23,20 +23,26 @@ void solve (){
     int n;
     cin>>n;    
     int a,b, c,d;
-
+    bool check = false;
     for (int i =1;i<=4;i++){
         cin>>a>>b>>c>>d;
-        if((a<c && b<d)||(a>c && b>d)){
-            continue;
-        }
-        int chocmin= min(a,c);
-        int juicemin = min(b,d);
+        // if((a<c && b<d)||(a>c && b>d)){
+        //     continue;
+        // }
+        // cout<<"here"<<i<<endl; 
+        int chocmin= min(a,b);
+        int juicemin = min(c,d);
         if(n>=chocmin+juicemin){
-            cout<<i<<" ";
-            chocmin==a?cout<<chocmin<<" "<<n-chocmin:cout<<juicemin<<" "<<n-juicemin;
-            return;
+            cout<<i<<" "<<chocmin<<" "<<n-chocmin<<"\n";
+            // chocmin==a?cout<<chocmin<<" "<<n-chocmin:cout<<juicemin<<" "<<n-juicemin;
+            // cout<<"\n";
+
+            check = true;
+            break;
+
         }
     }
+    if(check==false)
     cout<<-1<<'\n';   
 }
 
