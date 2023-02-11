@@ -18,7 +18,27 @@ void precal(){
 void solve (){
     int a ,b ,c;
     cin>>a>>b>>c;
-    
+    int x, y;
+
+    float shop2per = ((float)c)/b;
+    //this is the cost per doubnut for shop two
+
+    if(((float)a)<=shop2per){
+        y= -1;
+        x = 1;
+
+    }
+    else {
+        y = b;
+        if(c<=a){
+            x =-1;
+        }
+        else {
+            x=1;
+        }
+    }
+    cout<<x<<" "<<y<<"\n";
+
 }
 
 int main(){
