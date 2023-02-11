@@ -16,7 +16,32 @@ void precal(){
 }
 
 void solve (){
-    
+    int l,r,x,y;
+    cin>>l>>r>>x>>y;
+    double k ;
+    cin>>k;
+    double temp ;
+    int exp = l, cost=x;
+
+    while(exp<=r && cost<=y){
+        temp = ((double)exp)/cost;
+        // cout<<exp<<" "<<temp<<"\n";
+
+        if(temp<k){
+
+            exp++;
+        }
+        else if(temp>k){
+            cost++;
+        }
+        else {
+            cout<<"YES"<<"\n";
+            return;
+        }
+    }
+
+    cout<<"NO"<<"\n";
+
 
 }
 
