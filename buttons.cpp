@@ -15,16 +15,28 @@ void precal(){
 
 }
 
+// void solve (){
+//     ll n;
+//     cin>>n;
+//     ll ans=0;
+//     int i = 1;
+//     while(i<=n){
+//         ans+=i*(n-i)+1;
+//         i++;
+//     }
+//     cout<<ans<<"\n";
+// }
 void solve (){
     ll n;
     cin>>n;
-    ll ans=0;
-    int i = 1;
+    ll ans = n;
+    int i =1;
     while(i<=n){
-        ans+=i*(n-i)+1;
+        ans+=i*(n-i);
         i++;
     }
     cout<<ans<<"\n";
+
 }
 
 int main(){

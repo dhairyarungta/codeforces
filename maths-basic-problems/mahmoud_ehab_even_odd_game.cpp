@@ -18,7 +18,11 @@ void precal(){
 void solve (){
     int n;
     cin>>n;
-    
+    if(n%2==1)
+        cout<<"Ehab"<<"\n";
+    else 
+        cout<<"Mahmoud"<<"\n";
+
 }
 
 int main(){

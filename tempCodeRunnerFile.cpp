@@ -1,23 +1,11 @@
 void solve (){
-//     string s ;
-//     cin>>s;
-
-//     string copy = s;
-//     if(s.size()==1){
-//         cout<<toupper(s[0])<<'\n';
-//         return;
+//     ll n;
+//     cin>>n;
+//     ll ans=0;
+//     int i = 1;
+//     while(i<=n){
+//         ans+=i*(n-i)+1;
+//         i++;
 //     }
-    
-//     for (int i =1;i<s.size();i++){
-//         if(toupper(s[i])!=s[i]){
-//             cout<<copy<<"\n";
-//             return;
-//         }
-//         else {
-//             s[i]=tolower(s[i]);
-//         }
-//     }
-        
-//     s[0]=toupper(s[0]);
-//     cout<<s<<"\n";
+//     cout<<ans<<"\n";
 // }
