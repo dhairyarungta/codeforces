@@ -15,39 +15,27 @@ void precal(){
 
 }
 
-// void solve (){
-//     int n ,m;
-//     cin>>n>>m;
-//     if(n<m){
-//         cout<<-1<<"\n";
-//         return;
-//     }
-//     int num = n/2;
-//     int extra = num%m;
-//     num = num+extra;    
-//     // if(n%2==1)
-//     //     num++;
-
-//     cout<<num<<"\n";
-// }
 
 void solve(){
     int m , n;
     cin>>n>>m;
 
     int minsteps = n/2+(n%2==1);
-    // cout<< minsteps;
 
-    for (int i =minsteps;i<=n;i++){
-        if(i%m==0){
-            cout<<i<<'\n';
-            return;
-        }
+    // for (int i =minsteps;i<=n;i++){
+    //     if(i%m==0){
+    //         cout<<i<<'\n';
+    //         return;
+    //     }
+    // }
+    if(minsteps%m ==0){
+        cout<<minsteps;
     }
+    else if((minsteps+m-(minsteps%m))<=n){
+        cout<<minsteps+m-(minsteps%m);
+    }
+    else 
     cout<<-1<<'\n';
-    
-
-
 }
 int main(){
     fast_io;
