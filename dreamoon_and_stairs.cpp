@@ -28,6 +28,7 @@ void solve(){
     //         return;
     //     }
     // }
+    
     if(minsteps%m ==0){
         cout<<minsteps;
     }
