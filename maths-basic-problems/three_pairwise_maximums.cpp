@@ -16,11 +16,22 @@ void precal(){
 }
 
 void solve (){
-    int x , y , z;
-    cin>>x>>y>>z;
-    int a, b,c, ;
 
-    while()
+    int num [3];
+    for(int i =0;i<3;i++)cin>>num[i];
+    //num has x, y,z 
+
+    sort(num,num+3);
+
+    if(num[2]==num[1]){
+        
+        cout<<"YES\n"<<1<<" "<<num[0]<<" "<<num[1]<<'\n';
+    }
+
+    else 
+        cout<<"NO\n";
+
+
 }
 
 int main(){
@@ -29,7 +40,7 @@ int main(){
     cout<< setprecision(10);
     precal();
     int t =1;
-    // cin>> t ;
+    cin>> t ;
     for (int i =1;i<=t;i++){
         // cout<< "Case #"<<i<<": ";
         solve();
