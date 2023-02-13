@@ -29,12 +29,16 @@ void solve (){
     for(auto &i:vec) cin>>i.second;
 
      sort(vec.begin(),vec.end());
-     multimap<int, int> mp;
-     for (auto [i,j]:vec)mp.insert(pair<int,int>(j,i));
 
+    //dp contains the min power values for upperbound to n-1 index
 
+    vector<int>dp(n);
+    dp[n-1]=vec[n-1].second;
+    for (int i = n-2;i>=0;i--){
+        dp[i]= min(dp[i+1],vec[i].second);
+    }
      auto i = vec.begin();
-    
+     
      int total =k;
     while(i!=vec.end() && k>0){
         i  =upper_bound(vec.begin(),vec.end(),total,cmp);        
@@ -42,11 +46,11 @@ void solve (){
             cout<<"YES\n";
             return;
         }
-        
-        int minval = INT_MAX;
-        for (auto iter= i;iter!=vec.end();iter++){
-            minval=min(minval,(*iter).second);
-        }
+        // int minval = INT_MAX;
+        // for (auto iter= i;iter!=vec.end();iter++){
+        //     minval=min(minval,(*iter).second);
+        // }
+        int minval = dp[i-vec.begin()];
         k -=minval;
         total+=k;
     
