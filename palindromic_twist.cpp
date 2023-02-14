@@ -20,7 +20,18 @@ void solve (){
     cin>>n;
     string s;
     cin>>s;
-    
+    int st = 0,en = s.size()-1;
+    while(st<en){
+         if(abs(s[st]-s[en])==2 || abs(s[st]-s[en])==0){       
+        }
+        else {
+            cout<<"NO\n";
+            return;
+        }
+        st++;
+        en--;
+    }
+    cout<<"YES\n";
 }
 
 int main(){
