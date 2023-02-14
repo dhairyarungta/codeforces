@@ -52,6 +52,34 @@ void solve (){
     cout<<-1<<"\n";
 }
 
+void solve2(){
+    int n;
+    cin>>n;
+    string ans = "";
+    ll a= INT_MAX, b= INT_MAX;
+    for (int i =0;i*7<=n;i++)
+    {
+        int val = (n-i*7);
+
+        if(val%4==0){
+        int fourcount = val/4;
+        if((fourcount+i)<=a+b){
+            b = i;   
+            a = (n-b*7)/4;
+
+        }
+        }
+        else continue;
+    }
+    if(a==INT_MAX)
+        cout<<-1<<"\n";
+    else {
+        for (int i=0;i<a;i++ )ans.push_back('4');
+        for (int i =0;i<b;i++)ans.push_back('7');
+        cout<<ans<<"\n";
+    }
+}
+
 int main(){
     fast_io;
     cout<<fixed;
@@ -61,7 +89,8 @@ int main(){
     // cin>> t ;
     for (int i =1;i<=t;i++){
         // cout<< "Case #"<<i<<": ";
-        solve();
+        // solve();
+        solve2();
     }
 
     return 0;
