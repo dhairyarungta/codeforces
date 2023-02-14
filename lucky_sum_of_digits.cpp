@@ -19,11 +19,37 @@ void solve (){
     int n;
     cin>>n;
 
-    int temp = n;
+    string ans ="";
 
-    int four =0;
-    int seven= 0;
-    while(temp)
+    while(n>0){
+
+    if(n%7==0){
+        for(int i=0;i<n/7;i++)
+            ans.push_back('7');
+
+        n=0;
+        break;
+    }
+
+    // else if(n%4==0){
+    //     for(int i=0;i<n/4;i++)
+    //         ans.push_back('4');
+
+    //     n=0;
+    //     break;
+    // }
+
+    n-=4;
+    ans.push_back('4');
+
+    }
+
+
+    // reverse(ans.begin(),ans.end());
+    if(n==0)
+    cout<<ans<<"\n";
+    else 
+    cout<<-1<<"\n";
 }
 
 int main(){
