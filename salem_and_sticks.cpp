@@ -17,6 +17,7 @@ void precal(){
 
 void solve (){
     int n;
+    cin>>n;
     vector<int> vec(n);
     for (auto &i:vec)cin>>i;
     int t =0, mincost =INT_MAX;
@@ -25,20 +26,21 @@ void solve (){
     for (int i = 1;i<=100;i++){
         int cur = 0;
         for (int j =0;j<n;j++){
-            if(i!=1 && i!=100){
+            // if(i!=1 && i!=100)
+            {
 
                 int val = min({(int)abs(vec[j]-i),(int)abs(vec[j]-i-1),(int)abs(vec[j]-i+1)});
                 cur+=val;
 
             }
-            else if(i==1){
-                int val2 = min((int)abs(vec[j]-1),(int)abs(vec[j]-i-1));
-                cur+=val2;
-            }
-            else if(i==100){
-                int val3 = min((int)abs(vec[j]-1),(int)abs(vec[j]-i+1));
-                cur+=val3;
-            }
+            // else if(i==1){
+            //     int val2 = min((int)abs(vec[j]-1),(int)abs(vec[j]-i-1));
+            //     cur+=val2;
+            // }
+            // else if(i==100){
+            //     int val3 = min((int)abs(vec[j]-1),(int)abs(vec[j]-i+1));
+            //     cur+=val3;
+            // }
         }
         if(cur<mincost){
             mincost=cur;
