@@ -16,26 +16,17 @@ void precal(){
 }
 
 void solve (){
-    int n,m;
-    cin>>n>>m;
-    int ans  = 0;
+     ll l1, r1, l2,r2,k;
+    cin>>l1>>r1>>l2>>r2>>k;
+     ll ans = 0;
 
-    while(n>0 && m>0){
-        if(max(n,m)<2){
-            break;
-        }
-        if(n>m){
-            ans ++;
-            n-=2;
-            m++;
-        }
-        else{
-            ans++;
-            n++;
-            m-=2;
-        }
+    if(l2<=r1 && l1<=r2){
+        ans = min(r1,r2)-max(l2,l1)+1;
+        if(k>=max(l2,l1) && k<=(min(r1,r2))) ans --;
     }
-    cout<<ans<<"\n";
+
+    cout<<ans<<'\n';
+    
 }
 
 int main(){
