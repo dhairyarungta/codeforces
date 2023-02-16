@@ -14,44 +14,42 @@ using namespace std;
 void precal(){
 
 }
+void solve(){
+    ll n,k;
+    cin>>n>>k;
+    if(n%2 != k%2){
+        cout<<"NO\n";
+        return;
+    }
 
+    if(k*k<=n)cout<<"YES\n";
+    else cout<<"NO\n";
+}
 // void solve (){
-//     ll a,b;
-//     cin>>a>>b;
-//     ll ans = 0;
-//     while(a!=b){
-//         ll len = max(a,b);
-//         ll width = min(a,b);
-//         a=len-width;
-//         b = width;
-//         ans++;
-        
+//     int n,k;
+//     cin>>n>>k;
+    
+//     if((n%2==0 && k%2==1)||(n%2==1 && k%2==0)){
+//         cout<<"NO\n";
+//         return;
 //     }
-//     ans ++;
-//     cout<<ans<<"\n";
+
+//     int num = n/k;
+//     int skip =k/2; 
+//     if(num%2==1 && num-2*(skip)>0){
+//         cout<<"YES\n";
+//     }
+//     else if(num%2==0 && num-2*skip>= 0)cout<<"YES\n";
+//     else cout<<"NO\n";
 // }
 
-void solve (){
-    ll a, b;
-    cin>>a>>b;
-    ll ans =0;
-
-    while(a%b!=0){
-        ll val = a%b;
-        ans+=a/b;
-        a= b;
-        b= val;
-    }
-    ans+=a/b;
-    cout<<ans<<"\n";
-}
 int main(){
     fast_io;
     cout<<fixed;
     cout<< setprecision(10);
     precal();
     int t =1;
-    // cin>> t ;
+    cin>> t ;
     for (int i =1;i<=t;i++){
         // cout<< "Case #"<<i<<": ";
         solve();

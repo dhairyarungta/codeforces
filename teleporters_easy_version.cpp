@@ -15,36 +15,10 @@ void precal(){
 
 }
 
-// void solve (){
-//     ll a,b;
-//     cin>>a>>b;
-//     ll ans = 0;
-//     while(a!=b){
-//         ll len = max(a,b);
-//         ll width = min(a,b);
-//         a=len-width;
-//         b = width;
-//         ans++;
-        
-//     }
-//     ans ++;
-//     cout<<ans<<"\n";
-// }
-
 void solve (){
-    ll a, b;
-    cin>>a>>b;
-    ll ans =0;
 
-    while(a%b!=0){
-        ll val = a%b;
-        ans+=a/b;
-        a= b;
-        b= val;
-    }
-    ans+=a/b;
-    cout<<ans<<"\n";
 }
+
 int main(){
     fast_io;
     cout<<fixed;
