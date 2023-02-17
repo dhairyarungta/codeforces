@@ -29,7 +29,22 @@ void solve (){
     int ans =a[4];
     int temp = min(a[1],a[3]);
     a[1]-=temp; a[3]-=temp;
+    ans += temp;
+
+    if(a[2]%2==0){
+        if(a[1]==0)ans+=a[3];
+        else ans+=((a[1]+3)/4);
+    }
+    else {
+        if(a[1]==0)ans+=a[3]+1;
+        else {
+            ans+=(a[1]+5)/4;
+        }
+            
+    }
     
+    ans +=a[2]/2;
+    cout<<ans<<"\n";
 
 }
 
