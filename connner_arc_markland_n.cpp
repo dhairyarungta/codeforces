@@ -24,7 +24,7 @@ void solve (){
     sort(vec.begin(),vec.end());
     
     // for (auto i:vec)cout<<i<<" ";
-    for (int i =0;i<=n;i++){
+    for (int i =0;i<=k;i++){
         int temp1 = s-i;
         int temp2 = s+i;
 
