@@ -15,32 +15,9 @@ void precal(){
 
 }
 
-bool comp(const pair<int,int> &a, const pair<int,int> &b){
-    return (a.first+a.second)<=(b.first+b.second);
-}
 void solve (){
-    int n, c;
-    cin>>n>>c;
-    vector<pair<int,int>> vec(n);
-    //pair->first the cost to teleport
-    int temp = 1;
 
-    for (auto &[i,j]:vec){
-            cin>>i;
-            j = temp++;
-        }
-    
-    sort(vec.begin(),vec.end(),comp);
-    int ans = 0;
-    for (auto [i,j]:vec){
-        if(c-(i+j)>=0){
-            ans++;
-            c-=i+j;
-        }
-        else break;
-    }
 
-cout<<ans<<"\n";
 }
 
 int main(){
@@ -49,7 +26,7 @@ int main(){
     cout<< setprecision(10);
     precal();
     int t =1;
-    cin>> t ;
+    // cin>> t ;
     for (int i =1;i<=t;i++){
         // cout<< "Case #"<<i<<": ";
         solve();
