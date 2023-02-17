@@ -16,7 +16,40 @@ void precal(){
 }
 
 void solve (){
+    int n ,m;
+    cin>>n>>m;
+    vector<vector<int>>vec(m);
+    for (int i =0;i<m;i++){
+        vector<int>temp(n);
+        for (auto &j:temp){
+            cin>>j;
+        }
+        vec[i]=temp;
+    }
 
+
+    vector<int> wins(n+1,0);
+    for (int i =0;i<m;i++ ){
+        int index=0, maxvotes=INT_MIN;
+        for (int j = 0;j<n;j++){
+            if(maxvotes<vec[i][j]){
+                index =j;
+                maxvotes= vec[i][j];
+            }
+        }
+        wins[index+1]++;
+    }
+
+    int finalwinner , maxval =INT_MIN;
+    // for (auto i:wins)cout<<i<<" "; 
+    for (int i =1;i<=n;i++){
+        if(wins[i]>maxval){
+            maxval = wins[i];
+            finalwinner=i;
+        }
+    }
+
+    cout<<finalwinner<<"\n";
 
 }
 
