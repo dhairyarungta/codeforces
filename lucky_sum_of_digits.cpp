@@ -30,22 +30,10 @@ void solve (){
         n=0;
         break;
     }
-
-    // else if(n%4==0){
-    //     for(int i=0;i<n/4;i++)
-    //         ans.push_back('4');
-
-    //     n=0;
-    //     break;
-    // }
-
     n-=4;
     ans.push_back('4');
 
     }
-
-
-    // reverse(ans.begin(),ans.end());
     if(n==0)
     cout<<ans<<"\n";
     else 
