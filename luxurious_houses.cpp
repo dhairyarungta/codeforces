@@ -16,6 +16,31 @@ void precal(){
 }
 
 void solve (){
+    int n;
+    cin>>n;
+    vector<int> vec(n);
+    for (auto &i:vec)cin>>i;
+    vector<int> ans (n);
+    ans[n-1]=0;
+    int curmax = vec[n-1];
+
+
+    for (int i =n-2;i>=0;i--){
+        // cout<<curmax<<" ";
+        curmax = max(curmax,vec[i+1]);
+        ans[i]=curmax;    
+    }
+    // for (auto i :ans )cout<<i<<" ";
+    // cout<<endl;
+
+    int sum = 0;
+    for (int i =0;i<n;i++){
+        // sum=1+(ans[i]-vec[i]);
+        ans[i]>=vec[i]?sum=ans[i]-vec[i]+1:sum = 0;
+        cout<<sum<<" ";
+    }
+    cout<<"\n";
+    
 
 }
 
