@@ -19,12 +19,39 @@ void solve (){
     string s ;
     cin>>s;
     int len = s.size();
+    string temp = s;
 
     sort(s.begin(),s.end());
     char cur ='a';
     for (int i=0;i<s.size();i++){
+        if(s[i]!=cur && s[i]!=cur+1){
+            cout<<"NO\n";
+            return;
+        }
+
+        if(s[i]==cur+1)cur++;
 
     }
+
+    map<char, int> mp;
+    for (int i =0;i<temp.size();i++){
+        if(mp.count(temp[i])==0){
+            mp[temp[i]]=i;
+        }
+    }
+
+    for (auto iter= mp.begin();iter!= mp.end();iter++){
+        if(iter->second<(prev(iter)->second)){
+            cout<<"NO\n";
+            return;
+        }
+    }
+    if(temp[0]!='a'){
+        cout<< "NO\n";
+        return;
+    }
+
+    cout<<"YES\n";
 }
 
 int main(){
