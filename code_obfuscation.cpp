@@ -19,7 +19,12 @@ void solve (){
     string s ;
     cin>>s;
     int len = s.size();
-    
+
+    sort(s.begin(),s.end());
+    char cur ='a';
+    for (int i=0;i<s.size();i++){
+
+    }
 }
 
 int main(){
