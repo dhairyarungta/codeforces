@@ -39,9 +39,16 @@ void solve (){
             mp[temp[i]]=i;
         }
     }
+    // for (auto [i,j]:mp){
+    //     cout<<i<<" "<<j<<endl;
+    // }
+    // cout<<endl;
+    auto iter = mp.begin();
+    ++iter;
+    for (;iter!= mp.end();iter++){
+        // cout<<iter->second<<" "<<(prev(iter))->second<<endl;
+        if(iter->second<((prev(iter))->second)){
 
-    for (auto iter= mp.begin();iter!= mp.end();iter++){
-        if(iter->second<(prev(iter)->second)){
             cout<<"NO\n";
             return;
         }
