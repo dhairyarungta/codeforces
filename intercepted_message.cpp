@@ -52,6 +52,7 @@ void solve (){
 
     }
     cout<<count<<"\n";
+
 }
 
 int main(){
