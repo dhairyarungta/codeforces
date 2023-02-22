@@ -16,7 +16,42 @@ void precal(){
 }
 
 void solve (){
+    ll n,m;
+    cin>>n>>m;
+    vector<ll>a(n),b(m);
+    
+    for (auto &i:a)cin>>i;
+    for (auto &i:b)cin>>i;
+    
+    int maxans = min(n,m);
 
+    int i = 0, j= 0;
+    // int cursum =0 ;
+    int count = 0;
+
+    while(i<n || j<m){
+        if(a[i]==b[j]){
+            count++;
+            i++;j++;
+        }
+        else {
+            int sum1 =a[i],sum2 =b[j];
+            i++; j++;
+            while(sum1!=sum2){
+                if(sum1<sum2){
+                    sum1+=a[i];
+                    i++;
+                }
+                else {
+                    sum2+=b[j];
+                    j++;
+                }
+            }
+            count++;
+        }
+
+    }
+    cout<<count<<"\n";
 }
 
 int main(){
