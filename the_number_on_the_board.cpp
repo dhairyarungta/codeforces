@@ -16,6 +16,37 @@ void precal(){
 }
 
 void solve (){
+    ll k;
+    cin>>k;
+    string s;
+    cin>>s;
+
+    ll sum = 0;
+    for (auto i: s){
+        sum+=(i-'0');
+    }
+
+    if(sum>=k){
+        cout<<0<<"\n";
+        return;
+
+    }
+    else {
+        string temp = s;
+        int cursum = sum;
+        int count = 0 ;
+        int i =0;
+        sort(temp.begin(),temp.end());
+        while (cursum<k){
+            cursum-=(temp[i]-'0');
+            cursum+=9;
+            count++;
+            i++;
+        }
+
+        cout<<count<<"\n";
+
+    }
 
 }
 
