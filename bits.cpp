@@ -25,6 +25,25 @@ void solve (){
     }
 
     for (int i =0;i<n;i++){
+        ll lowerval = vec[i].first;
+        ll topval = vec[i].second;
+        ll cur = lowerval;
+
+        while(cur<=topval){
+        ll mask = cur;
+        ll temp = ~mask;
+        temp = temp&(~(temp-1));
+        mask|=temp;
+        
+        if(mask<=topval){
+            cur= mask;
+        }
+        else {
+            break;
+        }
+        
+        }   
+    cout<<cur<<"\n";
 
     }
 
