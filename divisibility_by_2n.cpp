@@ -27,6 +27,27 @@ int poweroftwo(int n){
     return ans;
 }
 
+int bitpowertwo (int n){
+    int temp = n&(~(n-1));
+    if(temp == 0) return 0;
+    bool check = false;
+    int i =1;
+    for (;i<32;i++){
+        if((temp>>i) &1){
+            check = true;
+            break;
+        }
+    }
+
+    if(check ==true)    
+        return i;
+    else 
+        return 0;
+
+
+}
+
+
 void solve (){
     int n;
     cin>>n;
@@ -36,11 +57,13 @@ void solve (){
     int firstval = 0;
     vector<int>b;
     for (int i =1;i<=n;i++){
-        firstval+=poweroftwo(a[i]);
-        b.push_back(poweroftwo(i));
+        firstval+=bitpowertwo(a[i]);
+        // cout<<firstval<<" ";
+        b.push_back(bitpowertwo(i));
     }
 
     sort(all(b),greater<int>());
+    // for(auto i:b)cout<<i<<" ";
     int count = 0;
     for (auto i:b ){
         if(firstval>=n)break;
@@ -51,7 +74,6 @@ void solve (){
 
     if(firstval<n)count=-1;
     cout<<count<<"\n";
-
 
 }
 
@@ -65,7 +87,9 @@ int main(){
     for (int i =1;i<=t;i++){
         // cout<< "Case #"<<i<<": ";
         solve();
+
     }
+    // cout<<bitpowertwo(16)<<" "<<bitpowertwo(7);
 
     return 0;
 
