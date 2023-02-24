@@ -20,7 +20,46 @@ void solve (){
      cin>>n>>k;
      string s ;
      cin>>s;
-     
+    
+    int ans = 0;
+    
+    map<string,int> mp;
+    
+    int st =0,en= 0;
+    int count = 0;
+
+    while(en<n){
+        if(count == k){
+            string temp(k,s[st]);
+            mp[temp]++;
+            st=en;
+            count=0;
+            // continue;
+        }
+
+
+        if(s[en]==s[st]){
+            count++;
+            en++;
+        }
+        else {
+            st=en;
+            count=0;
+        }
+    }
+    if(count == k){
+            string temp(k,s[st]);
+            mp[temp]++;
+        }
+    int maxval = 0;
+
+    for (auto [i,j]:mp){
+        maxval=max(j,maxval);
+        // cout<<i<<" "<<j<<endl;
+    }
+    cout<<maxval<<"\n";
+    
+
 }
 
 int main(){
