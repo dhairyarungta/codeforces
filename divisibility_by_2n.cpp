@@ -15,7 +15,43 @@ void precal(){
 
 }
 
+int poweroftwo(int n){
+    int ans = 0;
+    while(n!=0){
+        if(n%2==0){
+            ans++;
+            n/=2;
+        }
+        else break;
+    }
+    return ans;
+}
+
 void solve (){
+    int n;
+    cin>>n;
+    vector<int> a(n+1);
+    // for (auto &i:a)cin>>i;
+    for(int i =1;i<=n;i++)cin>>a[i];
+    int firstval = 0;
+    vector<int>b;
+    for (int i =1;i<=n;i++){
+        firstval+=poweroftwo(a[i]);
+        b.push_back(poweroftwo(i));
+    }
+
+    sort(all(b),greater<int>());
+    int count = 0;
+    for (auto i:b ){
+        if(firstval>=n)break;
+
+        firstval+=i;
+        count++;
+    }
+
+    if(firstval<n)count=-1;
+    cout<<count<<"\n";
+
 
 }
 
@@ -25,7 +61,7 @@ int main(){
     cout<< setprecision(10);
     precal();
     int t =1;
-    // cin>> t ;
+    cin>> t ;
     for (int i =1;i<=t;i++){
         // cout<< "Case #"<<i<<": ";
         solve();
