@@ -28,6 +28,8 @@ void solve(){
     else cout<<"NO\n";
     
 }
+
+
 // void solve (){
 // int n;
 // cin>>n;
