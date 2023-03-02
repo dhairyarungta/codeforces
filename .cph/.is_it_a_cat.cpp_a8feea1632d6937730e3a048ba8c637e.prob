@@ -1,0 +1,1 @@
+{"name":"Local: is_it_a_cat","url":"/Users/dhairyarungta/Codes1/codeforces/is_it_a_cat.cpp","tests":[{"id":1677782428383,"input":"7\n4\nmeOw\n14\nmMmeoOoWWWwwwW\n3\nmew\n7\nMmeEeUw\n4\nMEOW\n6\nMmyaVW\n5\nmeowA\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/dhairyarungta/Codes1/codeforces/is_it_a_cat.cpp","group":"local","local":true}
