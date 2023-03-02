@@ -16,7 +16,18 @@ void precal(){
 }
 
 void solve (){
-
+    ll n,m;
+    cin>>n>>m;
+    if(n%2==0){
+        cout<<(n/2)*m<<"\n";
+    } 
+    else if(m%2==0){
+        cout<<(m/2)*n<<"\n";
+    } 
+    else{
+        ll ans = (n*((m-1)/2))+n/2+1;
+        cout<<ans<<"\n";
+    }
 }
 
 int main(){
@@ -25,7 +36,7 @@ int main(){
     cout<< setprecision(10);
     precal();
     int t =1;
-    // cin>> t ;
+    cin>> t ;
     for (int i =1;i<=t;i++){
         // cout<< "Case #"<<i<<": ";
         solve();
