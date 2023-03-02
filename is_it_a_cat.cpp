@@ -35,24 +35,6 @@ void solve (){
         i= INT_MAX;
         j= INT_MIN;
     }
-
-    // for (int i =0 ;i<n;i++){
-    //     if(s[i]=='m'||s[i]=='M'){
-    //         index[0].first=min(index[0].first);
-    //         index[0].second= max(index[0])
-    //     }
-    //     if(s[i]=='e'||s[i]=='E'){
-            
-    //     }
-    //     if(s[i]=='o'||s[i]=='O'){
-            
-    //     }
-    //     if(s[i]=='w'||s[i]=='W'){
-            
-    //     }
-
-    // }
-
     for (int i = 0;i<n;i++){
         if(s[i]=='m'||s[i]=='M'){
             if(index[0].first==INT_MAX)
