@@ -36,7 +36,7 @@ void solve(){
 
     }
 
-
+    // Code for easy version
     // for (auto iter = a.begin();iter!=a.end();iter++){
     //     if(*iter==0){
     //         auto it = max_element(a.begin(),iter);
