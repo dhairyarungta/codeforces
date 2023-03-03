@@ -14,16 +14,38 @@ using namespace std;
 void precal(){
 
 }
-
-void solve (){
-    ll n;
+void solve(){
+    int n;
     cin>>n;
-    vector<ll>a(n);
-    for (auto &i:a)cin>>i;
+    vector<int>a(n),b(n);
+    int aone= 0, azero = 0,bone=0,bzero=0;
 
-    vector<ll>b(n+1);
-    
+    for(auto &i:a){
+        cin>>i;
+        if(i==1)aone++;
+        else azero++;
+    }
+
+    for (auto &i:b){
+        cin>>i;
+        if(i==1)bone++;
+        else bzero++;
+    }
+
+    ll ans =0;
+    //case not using rearrange
+    for(int i =0;i<n;i++){
+        if(a[i]!=b[i])ans++;
+    }
+
+    ll ans2 = 1;
+    //using rearrange once;
+    ans2+=min(abs(aone-bone),abs(azero-bzero));
+
+    cout<<min<ll>(ans2,ans)<<"\n";
 }
+
+
 
 int main(){
     fast_io;
