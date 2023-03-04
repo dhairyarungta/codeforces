@@ -10,13 +10,41 @@
 #define all(x) (x).begin(), (x).end()
 
 using namespace std;
+    ll n;
+
+    vector<ll>vis(1000,0);
+    vector<pair<ll,ll>>a(1000);
 
 void precal(){
 
 }
+void dfs (ll num){
+    vis[num]=1;
+    for (int i =0;i<n;i++){
+        if(vis[i])continue;
 
+        if(a[i].first==a[num].first || a[i].second==a[num].second){
+            dfs(i);
+        }
+    }
+}
 void solve (){
+    cin>>n;
+    for (auto &i:a){
+        cin>>i.first;
+        cin>>i.second;
+    }
+    
+    //answer is counting the number of 
+    //connected graph components
+    ll count=-1;
+    for (int i =0;i<n;i++){
+        if(vis[i])continue;
+        dfs(i);
+        count++;
+    }
 
+    cout<<count<<endl;
 }
 
 int main(){
