@@ -15,53 +15,13 @@ void precal(){
 
 }
 
-
-//Greatest Common Divisor
-template<class T> 
-T gcd(T a, T b){
-    T temp = 0;
-    while(b){
-        temp = a;
-        a = b;
-        b = temp%b;
-    }
-    return a;
-}
-
-// Lowest Common Divisor
-template<class T>
-T lcm (T a, T b){
-    return (a*b)/gcd<T>(a,b);
-}
-
-
 void solve (){
     ll n;
     cin>>n;
     vector<ll>a(n);
     for (auto &i:a)cin>>i;
-
-    vector<ll>b(n+1,1);
-    b[0]=a[0];
-    b[n]=a[n-1];
-    for (int i=1;i<n;i++){
-        b[i]=lcm<ll>(a[i-1],a[i]);
-    }
-
-    for (int i =0;i<n;i++){
-        b[i]=gcd<ll>(b[i],b[i+1]);
-
-    }
-    for (int i =0;i<n;i++){
-        if(b[i]!=a[i]){
-            cout<<"NO\n";
-            return;
-        }
-    }
-    cout<<"YES\n";
-
-
-}
+    
+}   
 
 int main(){
     fast_io;
@@ -70,7 +30,7 @@ int main(){
     precal();
     int t =1;
     cin>> t ;
-for (int i =1;i<=t;i++){
+    for (int i =1;i<=t;i++){
         // cout<< "Case #"<<i<<": ";
         solve();
     }
