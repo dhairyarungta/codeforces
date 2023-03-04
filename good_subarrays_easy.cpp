@@ -14,7 +14,19 @@ using namespace std;
 void precal(){
 
 }
-
+void solve1(){
+    ll n;
+    cin>>n;
+    vector<ll>a(n);
+    for (auto &i:a)cin>>i;
+    vector<ll>dp(n,1);
+    for (int i =1;i<n;i++){
+        dp[i]= min(1+dp[i-1],a[i]);
+    }
+    ll ans = 0;
+    for (auto i:dp)ans+=i;
+    cout<<ans<<endl;
+}
 void solve (){
     ll n;
     cin>>n;
@@ -50,7 +62,8 @@ int main(){
     cin>> t ;
     for (int i =1;i<=t;i++){
         // cout<< "Case #"<<i<<": ";
-        solve();
+        // solve();
+        solve1();
     }
 
     return 0;

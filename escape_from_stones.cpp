@@ -16,17 +16,25 @@ void precal(){
 }
 
 void solve (){
-    ll n;
-    cin>>n;
-    string s ;
+    string s;
     cin>>s;
-    ll ans = n-1;
-    for (int i =0;i<n-1;i++){
-        if(s[i]==s[i+2])ans--;
-    }
-    cout<<ans<<"\n";
-}
 
+    ll n = s.size();
+    vector<ll>pos(n);
+    ll st = 0,en = n-1;
+
+    for (int i =0 ;i<n;i++){
+        if(s[i]=='l'){
+            pos[en]=i+1;
+            en--;
+        }
+        else {
+            pos[st]=i+1;
+            st++;
+        }
+    }
+    for (auto i:pos)cout<<i<<'\n';
+}
 
 int main(){
     fast_io;
@@ -34,7 +42,7 @@ int main(){
     cout<< setprecision(10);
     precal();
     int t =1;
-    cin>> t ;
+    // cin>> t ;
     for (int i =1;i<=t;i++){
         // cout<< "Case #"<<i<<": ";
         solve();
