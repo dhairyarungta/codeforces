@@ -1,0 +1,1 @@
+{"name":"Local: good_subarrays_easy","url":"/Users/dhairyarungta/Codes1/codeforces/good_subarrays_easy.cpp","tests":[{"id":1677912744269,"input":"3\n3\n1 2 3\n3\n1 1 1\n4\n2 1 4 3","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/dhairyarungta/Codes1/codeforces/good_subarrays_easy.cpp","group":"local","local":true}

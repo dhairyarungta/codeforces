@@ -20,7 +20,25 @@ void solve (){
     cin>>n;
     vector<ll>a(n);
     for (auto &i:a)cin>>i;
-    
+    ll ans = 0, cur = 0, index = 1;
+
+    for (int i =0;i<n;i++){
+        if(a[i]>=index){
+            cur+=index;
+            index++;
+        }
+        else{
+            while(a[i]!=index){
+                index--;
+                ans+=index;
+            }
+            cur =((index)*(index+1))/2;
+            index++;
+        
+        }
+    }
+    ans+=cur;
+    cout<<ans<<"\n";
 }   
 
 int main(){
