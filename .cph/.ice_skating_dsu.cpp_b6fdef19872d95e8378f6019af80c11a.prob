@@ -1,0 +1,1 @@
+{"name":"Local: ice_skating_dsu","url":"/Users/dhairyarungta/Codes1/codeforces/ice_skating_dsu.cpp","tests":[{"id":1677948167909,"input":"2\n2 1\n1 2\n","output":""},{"id":1677948170710,"input":"2\n2 1\n4 1","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/dhairyarungta/Codes1/codeforces/ice_skating_dsu.cpp","group":"local","local":true}
