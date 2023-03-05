@@ -16,8 +16,17 @@ void precal(){
 }
 
 void solve (){
-
-}
+    ll n;
+    cin>>n;
+    ll k1,k2;
+    cin>>k1;
+    vector<ll>a(k1);
+    for (auto &i:a)cin>>i;
+    cin>>k2; 
+    vector<ll>b(k2);
+    for(auto &i:b)cin>>i;
+    
+}   
 
 int main(){
     fast_io;

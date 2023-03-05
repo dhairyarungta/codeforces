@@ -16,27 +16,9 @@ void precal(){
 }
 
 void solve (){
-    string s;
-    cin>>s;
-    if(s=="0"){
-        cout<<4<<endl;
-        return;
-    }
-    int num = 0;
-
-    if(s.size()>1){
-        string temp ="";
-        temp.push_back(s[s.size()-2]);
-        temp.push_back(s[s.size()-1]);
-        num = stoi(temp);
-
-    }
-    else {
-        num= stoi(s);
-    }
-
-    if(num%4==0)cout<<4;
-    else cout<<0;
+    ll t, k;
+    cin>>t>>k;
+    vector<
 }
 
 int main(){
