@@ -16,44 +16,30 @@ void precal(){
 }
 
 void solve (){
-     ll a, b, c, d;
-     cin>>a>>b>>c>>d;
+    ll n;
+    cin>>n;
+    vector<ll>a(n);
+    for (auto &i:a)cin>>i;
+    sort(all(a));
 
-    if(b==d){
-        cout<<b<<"\n";
-        return;
-    }
-
-    for (int i  =0;i<150;i++){
-        if(b==d){
-            cout<<b<<endl;
-            return;
-
-        }
-        if(b<d)b+=a;
-        else d+=c;
-
-    }
-    cout<<-1<<endl;
-
-
-
-
-    //  if(abs(dif1)<=abs(dif2)){
-    //     for (int i =1;i<abs(dif1);i++){
-    //         ll temp1 =b+i*a;
-    //         ll temp2 = d+(abs(dif1)-i)*c;
-    //         if(temp1==temp2){
-    //             cout<<temp1;
-    //             return;
-    //         }
+    ll cur = 0;
+    ll ans =INT_MAX;
+    // for (int val = a[0];val<=3000;val++){
+    //     ll prev = val;
+    //     for (int i =0;i<n;i++){
+            
     //     }
-    //  }
-    //  else{
-    //     cout<<-1<<"\n";
-    //  }
+    //     ans=min<ll>(cur,ans);
+    // }
+    ll prev = a[0];
 
-
+    for (int i =1;i<n;i++ ){
+        ll temp = max<ll>(a[i],prev+1);
+        cur+=temp-a[i];
+        prev = temp;
+        
+    }
+    cout<<cur;
 }
 
 int main(){
