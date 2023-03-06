@@ -25,6 +25,7 @@ void solve (){
     cin>>k2; 
     vector<ll>b(k2);
     for(auto &i:b)cin>>i;
+
     
 }   
 

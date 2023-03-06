@@ -9,7 +9,7 @@
 #define inf (1LL<<60)
 #define all(x) (x).begin(), (x).end()
 
-using namespace std;
+using namespace std;x
 
 void precal(){
 
