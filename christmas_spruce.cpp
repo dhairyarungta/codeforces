@@ -18,7 +18,58 @@ void precal(){
 void solve (){
     ll n;
     cin>>n;
-    
+    vector<ll>a(n+1);
+
+    for (int i =2;i<=n;i++){
+        cin>>a[i];
+    }
+    map<ll,ll>mp;
+    set<ll>st;
+    st.insert(1);
+
+    for (int i = 2;i<=n;i++){
+        mp[i]=a[i];
+        st.insert(a[i]);
+        if(mp.count(a[i])!=0)
+            mp.erase(a[i]);
+    }
+
+    map<ll,ll>ct ;
+    for (auto [i,j]:mp){
+        ct[j]++;
+    }
+
+    // set<ll>st;
+    // if(ct[1]<3){
+    //     cout<<"No";
+    //     return;
+    // }
+
+    // for (auto [i,j]:ct){
+    //     // st.insert(i);
+    //     if(j<3){
+    //         cout<<"No";
+    //         // cout<<endl;
+    //         return ;
+    //     }
+    // }
+
+    // ll cur= 1;
+    // for (auto i:st){
+    //     if(cur!=i){
+    //         cout<<"No";
+    //         return;
+    //     }
+    //     cur++;
+    // }
+    for (auto i:st){
+        if(ct[i]<3 ){
+            cout<<"No";
+            return;
+        }
+    }
+    cout<<"Yes";
+
 }
 
 int main(){
