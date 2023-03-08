@@ -39,29 +39,6 @@ void solve (){
         ct[j]++;
     }
 
-    // set<ll>st;
-    // if(ct[1]<3){
-    //     cout<<"No";
-    //     return;
-    // }
-
-    // for (auto [i,j]:ct){
-    //     // st.insert(i);
-    //     if(j<3){
-    //         cout<<"No";
-    //         // cout<<endl;
-    //         return ;
-    //     }
-    // }
-
-    // ll cur= 1;
-    // for (auto i:st){
-    //     if(cur!=i){
-    //         cout<<"No";
-    //         return;
-    //     }
-    //     cur++;
-    // }
     for (auto i:st){
         if(ct[i]<3 ){
             cout<<"No";
