@@ -16,7 +16,15 @@ void precal(){
 }
 
 void solve (){
+    ll n, k;
+    cin>>n>>k;
+    vector<ll>a(n+1);
+    vector<ll>t(n+1);
 
+    for (int i =1;i<=n;i++)cin>>a[i];
+    for (int i =1;i<=n;i++)cin>>t[i];
+
+    
 }
 
 int main(){
