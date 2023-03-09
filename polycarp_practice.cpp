@@ -31,22 +31,9 @@ void solve (){
         total +=a[i].first;
         s.insert(a[i].second);
     }
-    // ll prev = 0;
+
     vector<ll>ans;
 
-    // for (auto i:s){
-    //     if(s.size()==1){
-    //         ans.push_back(n-prev);
-    //         s.erase(i);
-    //     }
-    //     else {
-    //         ans.push_back(i-prev+1);
-    //         prev = i;
-    //         s.erase(i);
-
-    //     }
-
-    // }
     ll prevelement = 0;
     if(s.size()==1){
         cout<<total<<"\n";
