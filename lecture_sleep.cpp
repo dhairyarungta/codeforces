@@ -23,7 +23,34 @@ void solve (){
 
     for (int i =1;i<=n;i++)cin>>a[i];
     for (int i =1;i<=n;i++)cin>>t[i];
+    if(k>=n){
+        cout<<accumulate(all(a),0)<<"\n";
+        return;
+    }
+    ll maxval = INT_MIN, cur = 0, index = 1;
+    for (int i = 1;i<=k;i++){
+        if(!t[i])cur+=a[i];
+    }
+    maxval = cur;
+    for (int i = 2;i<=n+1-k;i++){
+        if(!t[i+k-1])cur+=a[i+k-1];
+        if(!t[i-1]){cur-=a[i-1];}
 
+        if(cur>maxval){
+            index = i;
+            maxval = cur;
+        }
+        
+    }
+    ll totalval = 0;
+    for (int i =1;i<=n;i++){
+        if(t[i])totalval+=a[i];
+        else {
+            if(i>=index && i<=index+k-1)
+                totalval+=a[i];
+        }
+    }
+    cout<<totalval<<endl;
     
 }
 
