@@ -20,21 +20,6 @@ void solve (){
     cin>>n;
     vector<ll>a(n);
     for (auto &i:a)cin>>i;
-    // ll st= 0, en  =0;
-    // ll count = 0;
-    // ll maxval = INT_MIN;
-
-    // for(;en<n;en++){
-    //     if(a[en]<=2*a[st]){
-    //         maxval = max<ll>(maxval,en-st+1);
-    //     }
-    //     else {
-    //         while(a[en]>2*a[st]){
-    //             st++;
-    //         }
-    //         maxval = max<ll>(maxval,en-st+1);
-    //     }
-    // }
     ll maxval = 1;
     ll cur = 1;
     for (int i =0;i<n-1;i++){
